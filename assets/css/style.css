@@ -286,9 +286,10 @@
 .mp20-token-logo {
 	width: 32px;
 	height: 32px;
-	border-radius: 50%;
+	border-radius: 50% !important;
 	flex-shrink: 0;
 	object-fit: cover;
+	overflow: hidden;
 }
 
 .mp20-token-logo--placeholder {
@@ -599,8 +600,9 @@
 .mp20-modal-logo {
 	width: 52px;
 	height: 52px;
-	border-radius: 50%;
+	border-radius: 50% !important;
 	object-fit: cover;
+	overflow: hidden;
 	flex-shrink: 0;
 }
 

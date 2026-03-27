@@ -55,7 +55,7 @@ $agents_api  = new MP20_Agents_API();
 					<?php
 					printf(
 						/* translators: %s: settings page link */
-						esc_html__( 'Tip: add your MoonPay access token in %s to enable trending data.', MP20_TD ),
+						wp_kses_post( __( 'Tip: add your MoonPay access token in %s to enable trending data.', MP20_TD ) ),
 						'<a href="' . esc_url( admin_url( 'options-general.php?page=moonpay-top20' ) ) . '">' . esc_html__( 'Settings', MP20_TD ) . '</a>'
 					);
 					?>
