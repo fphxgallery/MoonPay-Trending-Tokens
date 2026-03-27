@@ -2,6 +2,8 @@
 
 A WordPress plugin that displays the top trending crypto tokens powered by the [MoonPay Agents API](https://agents.moonpay.com), with live price data, 24h change, volume, and direct buy links.
 
+![MoonPay Trending Tokens preview](assets/screenshots/preview.png)
+
 ## Features
 
 - Top 20 (up to 50) trending tokens for any supported chain
