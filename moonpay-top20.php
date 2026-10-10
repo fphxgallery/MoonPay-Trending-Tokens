@@ -3,7 +3,7 @@
  * Plugin Name: MoonPay Top 20 Trending Tokens
  * Plugin URI:  https://moonpay.com
  * Description: Displays the top 20 trending crypto tokens powered by the MoonPay Agents API, with direct buy links.
- * Version:     1.1.0
+ * Version:     1.1.1
  * Author:      @fPHXGallery
  * License:     GPL-2.0-or-later
  * Text Domain: moonpay-top20
@@ -13,7 +13,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'MP20_VERSION',    '1.1.0' );
+define( 'MP20_VERSION',    '1.1.1' );
 define( 'MP20_PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
 define( 'MP20_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
 define( 'MP20_TD',         'moonpay-top20' );

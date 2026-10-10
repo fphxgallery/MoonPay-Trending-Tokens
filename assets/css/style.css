@@ -166,6 +166,7 @@
 .mp20-rank { font-size: 11px; color: var(--mp20-faint); font-variant-numeric: tabular-nums; }
 .mp20-up { color: var(--mp20-up); }
 .mp20-down { color: var(--mp20-down); }
+.mp20-vol .mp20-sub { font-size: 13px; color: var(--mp20-muted); }
 .mp20-sub { font-size: 11px; color: var(--mp20-faint); }
 
 .mp20-token { display: flex; align-items: center; gap: 10px; min-width: 0; }
@@ -189,9 +190,6 @@
 	font-weight: 600;
 	font-size: 12px;
 }
-
-.mp20-bar { position: relative; height: 6px; border-radius: 3px; background: var(--mp20-surface); overflow: hidden; margin-bottom: 3px; }
-.mp20-bar i { position: absolute; inset: 0 auto 0 0; border-radius: 3px; background: var(--mp20-accent); }
 
 .mp20-buy { text-align: right; }
 .mp20-buy a { color: var(--mp20-accent); text-decoration: none; font-size: 12px; font-weight: 500; }
@@ -258,8 +256,8 @@
 	.mp20-row { grid-template-columns: 24px minmax(0, 1fr) minmax(0, 1fr); row-gap: 8px; }
 	.mp20-row > .mp20-token { grid-column: 2 / 4; }
 	.mp20-row > .mp20-price { grid-column: 2; text-align: left; }
-	.mp20-row > .mp20-vol { grid-column: 2 / 4; order: 5; }
+	.mp20-row > .mp20-vol { grid-column: 2 / 4; order: 5; text-align: left; }
 	.mp20-row > .mp20-buy { grid-column: 3; order: 6; }
-	.mp20-row > .mp20-num:not(.mp20-price) { grid-column: 3; grid-row: 2; }
+	.mp20-row > .mp20-num:not(.mp20-price):not(.mp20-vol) { grid-column: 3; grid-row: 2; }
 	.mp20-row > .mp20-vol::before { content: attr(data-label); display: block; font-size: 11px; color: var(--mp20-faint); }
 }

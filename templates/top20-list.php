@@ -28,7 +28,6 @@ $chain_labels = [
 $chain_label = $chain_labels[ $chain ] ?? ucfirst( $chain );
 $has_api_key = ! empty( $api_key );
 $agents_api  = new MP20_Agents_API();
-$max_volume  = $tokens ? max( array_column( $tokens, 'volume_24h' ) ) : 0;
 $initial_default = 10; // Rows shown before "Show all".
 ?>
 
@@ -79,7 +78,7 @@ $initial_default = 10; // Rows shown before "Show all".
 			<span>#</span>
 			<span><?php esc_html_e( 'Token', MP20_TD ); ?></span>
 			<span class="mp20-num"><?php esc_html_e( 'Price', MP20_TD ); ?></span>
-			<span><?php esc_html_e( '24h volume', MP20_TD ); ?></span>
+			<span class="mp20-num"><?php esc_html_e( '24h volume', MP20_TD ); ?></span>
 			<span class="mp20-num"><?php esc_html_e( '24h', MP20_TD ); ?></span>
 			<span></span>
 		</div>
@@ -95,7 +94,6 @@ $initial_default = 10; // Rows shown before "Show all".
 			$change_cls = $token['change_24h'] === 0.0 ? '' : ( $is_up ? 'mp20-up' : 'mp20-down' );
 			$vol        = $token['volume_24h'];
 			$vol_fmt    = $vol > 0 ? '$' . number_format( $vol, 0 ) : '—';
-			$vol_pct    = $max_volume > 0 ? max( 2, round( $vol / $max_volume * 100 ) ) : 0;
 			$buy_url    = $has_api_key ? $agents_api->get_buy_url( $token['moonpay_code'] ) : '';
 		?>
 			<div class="mp20-item"
@@ -123,8 +121,7 @@ $initial_default = 10; // Rows shown before "Show all".
 
 					<span class="mp20-num mp20-price" data-label="<?php esc_attr_e( 'Price', MP20_TD ); ?>"><?php echo esc_html( $price_fmt ); ?></span>
 
-					<div class="mp20-vol" data-label="<?php esc_attr_e( '24h volume', MP20_TD ); ?>">
-						<div class="mp20-bar"><i style="width:<?php echo esc_attr( $vol_pct ); ?>%"></i></div>
+					<div class="mp20-vol mp20-num" data-label="<?php esc_attr_e( '24h volume', MP20_TD ); ?>">
 						<span class="mp20-sub"><?php echo esc_html( $vol_fmt ); ?></span>
 					</div>
 
