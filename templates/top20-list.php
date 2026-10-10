@@ -125,7 +125,7 @@ $initial_default = 10; // Rows shown before "Show all".
 						<span class="mp20-sub"><?php echo esc_html( $vol_fmt ); ?></span>
 					</div>
 
-					<span class="mp20-num <?php echo esc_attr( $change_cls ); ?>" data-label="<?php esc_attr_e( '24h', MP20_TD ); ?>"><?php echo esc_html( $change_fmt ); ?></span>
+					<span class="mp20-num mp20-change <?php echo esc_attr( $change_cls ); ?>" data-label="<?php esc_attr_e( '24h', MP20_TD ); ?>"><?php echo esc_html( $change_fmt ); ?></span>
 
 					<span class="mp20-buy">
 						<?php if ( ! empty( $buy_url ) ) : ?>
